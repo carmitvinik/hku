@@ -157,6 +157,13 @@
         }
 
         a[title*="Home"] {
+            /* contain Home and ffHome and ffHomeff the same */
+            color: red;
+            background-color: yellow;
+        }
+
+        a[title~="Home"] {
+            /*contain **word Home with sepereted as individual word */
             color: red;
             background-color: yellow;
         }
