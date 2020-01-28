@@ -168,6 +168,42 @@
             background-color: yellow;
         }
 
+        [vanish] {
+            display: none;
+        }
+
+        [imglist] {
+            width: 300px;
+            display: block;
+            position: relative;
+            float: left;
+            background-color: red;
+
+
+        }
+
+        [bigimg] {
+            display: block;
+            position: relative;
+            float: left;
+            background-color: #00F;
+            width: 600px;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        [bigimg] img {
+            width: 600px;
+            height: 600px;
+        }
+
+        [imglist]:nth-child(2) {}
+
+        [imglist] img {
+
+            width: 200px;
+            height: 200px;
+        }
 
 
 
@@ -191,100 +227,118 @@
 
 
     -->
+    <div vanish>
+        <header>
+            <p>Content</p>
+            <h1>content </h1>
+            <h1>content </h1>
+            <h1>content </h1>
 
-    <header>
-        <p>Content</p>
-        <h1>content </h1>
-        <h1>content </h1>
-        <h1>content </h1>
+            <div>
+
+                <p>content</p>
+                <h2>content</h2>
+                <p>content</p>
+            </div>
+        </header>
+        <p>content</p>
+        <h1>content</h1>
+        <p>content</p>
+        <p>content</p>
+
+
+
+
+        <nav>
+            <ul>
+                <li><a href="#">Heading</a>
+                    <ul>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+
+                    </ul>
+
+                </li>
+
+                <li><a href="#">Heading</a>
+                    <ul>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+
+                    </ul>
+
+                </li>
+                <li><a href="#">Heading</a>
+                    <ul>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="#">Heading</a></li>
+                <li><a href="#">Heading</a></li>
+
+
+            </ul>
+        </nav>
 
         <div>
-
-            <p>content</p>
-            <h2>content</h2>
-            <p>content</p>
-        </div>
-    </header>
-    <p>content</p>
-    <h1>content</h1>
-    <p>content</p>
-    <p>content</p>
-
-
-
-
-    <nav>
-        <ul>
-            <li><a href="#">Heading</a>
-                <ul>
-                    <li><a href="#">sub</a></li>
-                    <li><a href="#">sub</a></li>
-                    <li><a href="#">sub</a></li>
-                    <li><a href="#">sub</a></li>
-
-                </ul>
-
-            </li>
-
-            <li><a href="#">Heading</a>
-                <ul>
-                    <li><a href="#">sub</a></li>
-                    <li><a href="#">sub</a></li>
-                    <li><a href="#">sub</a></li>
-                    <li><a href="#">sub</a></li>
-
-                </ul>
-
-            </li>
-            <li><a href="#">Heading</a>
-                <ul>
-                    <li><a href="#">sub</a></li>
-                    <li><a href="#">sub</a></li>
-                    <li><a href="#">sub</a></li>
-                    <li><a href="#">sub</a></li>
-
-                </ul>
-            </li>
-            <li><a href="#">Heading</a></li>
-            <li><a href="#">Heading</a></li>
-
-
-        </ul>
-    </nav>
-
-    <div>
-        <div class="qu">
-            This is a question..? .. :)
-            <div class="an">
-                This is the Answer;..
+            <div class="qu">
+                This is a question..? .. :)
+                <div class="an">
+                    This is the Answer;..
+                </div>
             </div>
+
         </div>
 
+        <div class="box">
+            <div class="box1 backgroundcolor border">text</div>
+            <div class="box2">text</div>
+            <div class="box3">text</div>
+            <div class="box4">text</div>
+            <div class="box5">text</div>
+
+        </div>
+
+        <div AttributeSelector box bgcolor="blue">
+
+            <ul>
+                <li><a href="#" title="Home Sweet home">Home</a></li>
+                <li><a href="#" title="Home Sweet home">About</a></li>
+                <li><a href="#" title="ome Sweet Home">Media</a></li>
+                <li><a href="http://www.mako.co.il" title="Home Sweet home">Mako</a></li>
+                <li><a href="#" title="Home Sweet home">DownMap</a></li>
+            </ul>
+
+
+
+        </div>
     </div>
 
-    <div class="box">
-        <div class="box1 backgroundcolor border">text</div>
-        <div class="box2">text</div>
-        <div class="box3">text</div>
-        <div class="box4">text</div>
-        <div class="box5">text</div>
+
+
+    <h2> this is ex</h2>
+    <h3> small img start with th | big img start with big</h3>
+
+    <div imglist>
+
+        <a href="#p1"><img src="th1.jpg" alt="image"></a>
+        <a href="#p2"><img src="th2.jpg" alt="image"></a>
+        <a href="#p3"><img src="th3.jpg" alt="image"></a>
+    </div>
+    <div bigimg>
+        <a id="p1"><img src="th1.jpg" alt="image"></a>
+        <a id="p2"><img src="th2.jpg" alt="image"></a>
+        <a id="p3"><img src="th3.jpg" alt="image"></a>
 
     </div>
-
-    <div AttributeSelector box bgcolor="blue">
-
-        <ul>
-            <li><a href="#" title="Home Sweet home">Home</a></li>
-            <li><a href="#" title="Home Sweet home">About</a></li>
-            <li><a href="#" title="ome Sweet Home">Media</a></li>
-            <li><a href="http://www.mako.co.il" title="Home Sweet home">Mako</a></li>
-            <li><a href="#" title="Home Sweet home">DownMap</a></li>
-        </ul>
-
-
-
-    </div>
-
 
 
 
