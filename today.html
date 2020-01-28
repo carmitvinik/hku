@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropDown</title>
+    <style>
+        :root {
+            color: wheat;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+            --fieldWidth: 100px;
+            --fieldHeight: 50px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #555555;
+        }
+
+        nav {
+            width: calc(var(--fieldWidth) * 7);
+            height: calc(var(--fieldHeight) * 1);
+            background-color: #004400;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        nav li {
+            width: var(--fieldWidth);
+            padding: 10px;
+            border-radius: 25px;
+
+            float: left;
+        }
+
+        /* nav li::after {
+            content: "\21AA";
+            text-align: right;
+
+            /*css entity*/
+        /*
+            cursor: pointer;
+        }
+*/
+        nav ul {
+            list-style-type: none;
+
+        }
+
+        nav li:hover::after {
+            content: "\21AA";
+            align-content: right;
+        }
+
+        nav li:hover {
+            background-color: black;
+            color: white;
+        }
+
+        nav li:hover ul {
+            color: wheat;
+            display: block;
+            background-color: rgba(255, 255, 0, 0.5);
+            position: absolute;
+            top: calc(var(--fieldHeight));
+            /*   position: absolute;
+            left: var(--fieldWidth);*/
+            /*top: 0px;*/
+            border-radius: 25px;
+            border: 1px solid green;
+
+        }
+
+        nav li ul {
+            display: none;
+            list-style-type: none;
+        }
+
+        nav a {
+            color: yellowgreen;
+        }
+
+        nav li li {
+            margin: 0 auto;
+            clear: both;
+        }
+
+        .qu {
+            color: red;
+            font-size: 30pt;
+        }
+
+        .an {
+            font-size: 20pt;
+            color: orange;
+            display: none;
+            position: absolute;
+        }
+
+        div.qu:hover {
+            display: block;
+            cursor: pointer;
+        }
+
+        div.qu:hover div.an {
+            display: block;
+        }
+
+        div.box div {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            color: black;
+        }
+
+        .text {
+            font-family: tahoma;
+            font-size: 30pt;
+            color: #666;
+        }
+
+        .border {
+            border: 3px solid purple;
+        }
+
+        .backgroundcolor {
+            background-color: orangered;
+        }
+
+        /*
+        header>p {
+            color: teal;
+            background: #000;
+        }
+
+        p+h1 {
+            background-color: purple;
+            color: aqua;
+        }
+*/
+        p~h1 {
+            background-color: purple;
+            color: aqua;
+        }
+
+
+
+
+
+
+
+        /* 
+        position:[fixed | absolute | relative]
+        Itamar mention to use "class" with low specification and not to use "id"...
+        I think He should use the word... selectors... 
+        I really dont know why he s avoid to use the word selectors as a separate issue|subject|whatever: NaN;
+        
+        Itamar say to give every element position:absolute as a pagination tool. 
+
+        "float" left to make the boxes like a choo choo train
+
+        */
+    </style>
+</head>
+
+<body>
+    <!--
+
+
+
+    -->
+
+    <header>
+        <p>Content</p>
+        <h1>content </h1>
+        <h1>content </h1>
+        <h1>content </h1>
+
+        <div>
+
+            <p>content</p>
+            <h2>content</h2>
+            <p>content</p>
+        </div>
+    </header>
+    <p>content</p>
+    <h1>content</h1>
+    <p>content</p>
+    <p>content</p>
+
+
+
+
+    <nav>
+        <ul>
+            <li><a href="#">Heading</a>
+                <ul>
+                    <li><a href="#">sub</a></li>
+                    <li><a href="#">sub</a></li>
+                    <li><a href="#">sub</a></li>
+                    <li><a href="#">sub</a></li>
+
+                </ul>
+
+            </li>
+
+            <li><a href="#">Heading</a>
+                <ul>
+                    <li><a href="#">sub</a></li>
+                    <li><a href="#">sub</a></li>
+                    <li><a href="#">sub</a></li>
+                    <li><a href="#">sub</a></li>
+
+                </ul>
+
+            </li>
+            <li><a href="#">Heading</a>
+                <ul>
+                    <li><a href="#">sub</a></li>
+                    <li><a href="#">sub</a></li>
+                    <li><a href="#">sub</a></li>
+                    <li><a href="#">sub</a></li>
+
+                </ul>
+            </li>
+            <li><a href="#">Heading</a></li>
+            <li><a href="#">Heading</a></li>
+
+
+        </ul>
+    </nav>
+
+    <div>
+        <div class="qu">
+            This is a question..? .. :)
+            <div class="an">
+                This is the Answer;..
+            </div>
+        </div>
+
+    </div>
+
+    <div class="box">
+        <div class="box1 backgroundcolor border">text</div>
+        <div class="box2">text</div>
+        <div class="box3">text</div>
+        <div class="box4">text</div>
+        <div class="box5">text</div>
+
+    </div>
+
+
+</body>
+
+</html>
