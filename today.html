@@ -144,8 +144,22 @@
             color: aqua;
         }
 
+        [AttributeSelector] {}
 
 
+        [box] {
+            width: 200px;
+            height: 200px;
+        }
+
+        [bgcolor="blue"] {
+            background-color: #00f;
+        }
+
+        a[title*="Home"] {
+            color: red;
+            background-color: yellow;
+        }
 
 
 
@@ -249,6 +263,22 @@
         <div class="box5">text</div>
 
     </div>
+
+    <div AttributeSelector box bgcolor="blue">
+
+        <ul>
+            <li><a href="#" title="Home Sweet home">Home</a></li>
+            <li><a href="#" title="Home Sweet home">About</a></li>
+            <li><a href="#" title="ome Sweet Home">Media</a></li>
+            <li><a href="http://www.mako.co.il" title="Home Sweet home">Mako</a></li>
+            <li><a href="#" title="Home Sweet home">DownMap</a></li>
+        </ul>
+
+
+
+    </div>
+
+
 
 
 </body>
