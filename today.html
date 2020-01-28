@@ -16,6 +16,8 @@
             padding: 0;
             box-sizing: border-box;
             background: #555555;
+            --bigimg: 600px;
+            --smallimg: 200px;
         }
 
         nav {
@@ -172,14 +174,23 @@
             display: none;
         }
 
+        /****************************************************/
         [imglist] {
-            width: 300px;
+            width: var(--smallimg);
             display: block;
             position: relative;
             float: left;
-            background-color: red;
+            background-color: transparent;
 
 
+
+
+        }
+
+        [imglist] img {
+            padding: 10px;
+            box-sizing: border-box;
+            margin-top: 25px;
         }
 
         [bigimg] {
@@ -187,24 +198,43 @@
             position: relative;
             float: left;
             background-color: #00F;
-            width: 600px;
-            height: 600px;
+            width: var(--bigimg);
+            height: var(--bigimg);
             overflow: hidden;
+            margin-left: 25px;
+            box-shadow: 10px 10px gray;
+            margin-top: 25px;
+            border-radius: 20px;
         }
 
         [bigimg] img {
-            width: 600px;
-            height: 600px;
+            width: var(--bigimg);
+            height: var(--bigimg);
+
+
+
         }
 
-        [imglist]:nth-child(2) {}
 
         [imglist] img {
 
-            width: 200px;
-            height: 200px;
+            width: var(--smallimg);
+            height: var(--smallimg);
+
+            border-radius: 25px;
+
         }
 
+        [imglist] img:hover {
+            box-shadow: 10px 10px gray;
+        }
+
+        [imgflip] {
+            width: calc(var(--bigimg) + var(--smallimg) + 50px);
+            height: calc(var(--bigimg) + var(--smallimg) + 50px);
+            background-color: burlywood;
+            margin: 0 auto;
+        }
 
 
         /* 
@@ -326,20 +356,20 @@
 
     <h2> this is ex</h2>
     <h3> small img start with th | big img start with big</h3>
+    <div imgflip="">
+        <div imglist>
 
-    <div imglist>
+            <a href="#p1"><img src="th1.jpg" alt="image"></a>
+            <a href="#p2"><img src="th2.jpg" alt="image"></a>
+            <a href="#p3"><img src="th3.jpg" alt="image"></a>
+        </div>
+        <div bigimg>
+            <a id="p1"><img src="th1.jpg" alt="image"></a>
+            <a id="p2"><img src="th2.jpg" alt="image"></a>
+            <a id="p3"><img src="th3.jpg" alt="image"></a>
 
-        <a href="#p1"><img src="th1.jpg" alt="image"></a>
-        <a href="#p2"><img src="th2.jpg" alt="image"></a>
-        <a href="#p3"><img src="th3.jpg" alt="image"></a>
+        </div>
     </div>
-    <div bigimg>
-        <a id="p1"><img src="th1.jpg" alt="image"></a>
-        <a id="p2"><img src="th2.jpg" alt="image"></a>
-        <a id="p3"><img src="th3.jpg" alt="image"></a>
-
-    </div>
-
 
 
 </body>
