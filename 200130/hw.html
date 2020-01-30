@@ -9,31 +9,47 @@
     <style>
         :root {
             --menuItemW: 7em;
+            --menuItemH: 3em;
+            --menuItems: 6;
+            font-size: 1em;
         }
 
 
         .menu {
             display: flex;
             flex-direction: row;
+            justify-content:center;
             width: 100%;
-            height: 5em;
+            height: var(--menuItemH);
+            
 
         }
 
-
+.menuItem {
+    width: var(--menuItemW);
+    height: var(--menuItemH);
+    background-color: #ff0000;
+    color:wheat;
+    margin: 5px;
+    border-radius: 25px;
+    text-align: center;
+}
 
 
         .menubox {
             background-color: #AA4;
-            width: 7em;
-            height: 7em;
+            width:  var(--menuItemW);
+            height:  var(--menuItemH);
+            border-radius: 0px 0px 25px 25px;
+
             display: none;
+
         }
 
         .menuItem:hover .menubox {
             /*  position: absolute;*/
             display: block;
-            width: var(--menuItemW);
+           
         }
 
 
@@ -47,34 +63,50 @@
 
                 display: flex;
                 flex-direction: column;
-                width: 5em;
-                height: 5em;
+                width: var(--menuItemW);
+                height: calc(var(--menuItemH) * 2);
                 background-image: url("menuIco.png");
                 background-repeat: no-repeat;
                 background-position: top right;
-                background-size: cover;
+                background-size: var(--menuItemW);
+                background-color: wheat;
+                border: 1px solid brown;
+                box-sizing: border-box;
             }
 
             .menu * {
                 display: none;
             }
+            .menu:hover{
+                height: calc(var(--menuItemH) * var(--menuItems));
+            }
 
             .menu:hover .menuItem {
                 display: block;
+                
 
+            }
+            .menuItem:first-child{
+                margin-top: var(--menuItemW);   
             }
 
             .menuItem:hover .menubox {
                 /*  position: absolute;*/
-                display: block;
-                width: 9em;
-                height: 9em;
+                display:flex;
+                width: var(--menuItemW);
+                height: var(--menuItemW);
                 background-color: rgba(200, 200, 200, 0.5);
+                color:black;
                 border: 1px solid red;
-                left: calc(var(--menuItemW) - 2em);
+                left: calc(var(--menuItemW));
                 margin-top: -1em;
                 position: absolute;
+                border-radius: 10px;
 
+            }
+
+            .menuItem {
+                width: calc(var(--menuItemW) - 1em);
             }
 
         }
