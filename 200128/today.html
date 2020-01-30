@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropDown</title>
+    <style>
+        :root {
+            color: wheat;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+            --fieldWidth: 100px;
+            --fieldHeight: 50px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #555555;
+            --bigimg: 600px;
+            --smallimg: 200px;
+        }
+
+        nav {
+            width: calc(var(--fieldWidth) * 7);
+            height: calc(var(--fieldHeight) * 1);
+            background-color: #004400;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        nav li {
+            width: var(--fieldWidth);
+            padding: 10px;
+            border-radius: 25px;
+
+            float: left;
+        }
+
+        /* nav li::after {
+            content: "\21AA";
+            text-align: right;
+
+            /*css entity*/
+        /*
+            cursor: pointer;
+        }
+*/
+        nav ul {
+            list-style-type: none;
+
+        }
+
+        nav li:hover::after {
+            content: "\21AA";
+            align-content: right;
+        }
+
+        nav li:hover {
+            background-color: black;
+            color: white;
+        }
+
+        nav li:hover ul {
+            color: wheat;
+            display: block;
+            background-color: rgba(255, 255, 0, 0.5);
+            position: absolute;
+            top: calc(var(--fieldHeight));
+            /*   position: absolute;
+            left: var(--fieldWidth);*/
+            /*top: 0px;*/
+            border-radius: 25px;
+            border: 1px solid green;
+
+        }
+
+        nav li ul {
+            display: none;
+            list-style-type: none;
+        }
+
+        nav a {
+            color: yellowgreen;
+        }
+
+        nav li li {
+            margin: 0 auto;
+            clear: both;
+        }
+
+        .qu {
+            color: red;
+            font-size: 30pt;
+        }
+
+        .an {
+            font-size: 20pt;
+            color: orange;
+            display: none;
+            position: absolute;
+        }
+
+        div.qu:hover {
+            display: block;
+            cursor: pointer;
+        }
+
+        div.qu:hover div.an {
+            display: block;
+        }
+
+        div.box div {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            color: black;
+        }
+
+        .text {
+            font-family: tahoma;
+            font-size: 30pt;
+            color: #666;
+        }
+
+        .border {
+            border: 3px solid purple;
+        }
+
+        .backgroundcolor {
+            background-color: orangered;
+        }
+
+        /*
+        header>p {
+            color: teal;
+            background: #000;
+        }
+
+        p+h1 {
+            background-color: purple;
+            color: aqua;
+        }
+*/
+        p~h1 {
+            background-color: purple;
+            color: aqua;
+        }
+
+        [AttributeSelector] {}
+
+
+        [box] {
+            width: 200px;
+            height: 200px;
+        }
+
+        [bgcolor="blue"] {
+            background-color: #00f;
+        }
+
+        a[title*="Home"] {
+            /* contain Home and ffHome and ffHomeff the same */
+            color: red;
+            background-color: yellow;
+        }
+
+        a[title~="Home"] {
+            /*contain **word Home with sepereted as individual word */
+            color: red;
+            background-color: yellow;
+        }
+
+        [vanish] {
+            display: none;
+        }
+
+        /****************************************************/
+        [imglist] {
+            width: var(--smallimg);
+            display: block;
+            position: relative;
+            float: left;
+            background-color: transparent;
+
+
+
+
+        }
+
+        [imglist] img {
+            padding: 10px;
+            box-sizing: border-box;
+            margin-top: 25px;
+        }
+
+        [bigimg] {
+            display: block;
+            position: relative;
+            float: left;
+            background-color: #00F;
+            width: var(--bigimg);
+            height: var(--bigimg);
+            overflow: hidden;
+            margin-left: 25px;
+            box-shadow: 10px 10px gray;
+            margin-top: 25px;
+            border-radius: 20px;
+        }
+
+        [bigimg] img {
+            width: var(--bigimg);
+            height: var(--bigimg);
+
+
+
+        }
+
+
+        [imglist] img {
+
+            width: var(--smallimg);
+            height: var(--smallimg);
+
+            border-radius: 25px;
+
+        }
+
+        [imglist] img:hover {
+            box-shadow: 10px 10px gray;
+        }
+
+        [imgflip] {
+            width: calc(var(--bigimg) + var(--smallimg) + 50px);
+            height: calc(var(--bigimg) + var(--smallimg) + 50px);
+            background-color: burlywood;
+            margin: 0 auto;
+        }
+
+
+        /* 
+        position:[fixed | absolute | relative]
+        Itamar mention to use "class" with low specification and not to use "id"...
+        I think He should use the word... selectors... 
+        I really dont know why he s avoid to use the word selectors as a separate issue|subject|whatever: NaN;
+        
+        Itamar say to give every element position:absolute as a pagination tool. 
+
+        "float" left to make the boxes like a choo choo train
+
+        */
+    </style>
+</head>
+
+<body>
+    <!--
+
+
+
+    -->
+    <div vanish>
+        <header>
+            <p>Content</p>
+            <h1>content </h1>
+            <h1>content </h1>
+            <h1>content </h1>
+
+            <div>
+
+                <p>content</p>
+                <h2>content</h2>
+                <p>content</p>
+            </div>
+        </header>
+        <p>content</p>
+        <h1>content</h1>
+        <p>content</p>
+        <p>content</p>
+
+
+
+
+        <nav>
+            <ul>
+                <li><a href="#">Heading</a>
+                    <ul>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+
+                    </ul>
+
+                </li>
+
+                <li><a href="#">Heading</a>
+                    <ul>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+
+                    </ul>
+
+                </li>
+                <li><a href="#">Heading</a>
+                    <ul>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+                        <li><a href="#">sub</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="#">Heading</a></li>
+                <li><a href="#">Heading</a></li>
+
+
+            </ul>
+        </nav>
+
+        <div>
+            <div class="qu">
+                This is a question..? .. :)
+                <div class="an">
+                    This is the Answer;..
+                </div>
+            </div>
+
+        </div>
+
+        <div class="box">
+            <div class="box1 backgroundcolor border">text</div>
+            <div class="box2">text</div>
+            <div class="box3">text</div>
+            <div class="box4">text</div>
+            <div class="box5">text</div>
+
+        </div>
+
+        <div AttributeSelector box bgcolor="blue">
+
+            <ul>
+                <li><a href="#" title="Home Sweet home">Home</a></li>
+                <li><a href="#" title="Home Sweet home">About</a></li>
+                <li><a href="#" title="ome Sweet Home">Media</a></li>
+                <li><a href="http://www.mako.co.il" title="Home Sweet home">Mako</a></li>
+                <li><a href="#" title="Home Sweet home">DownMap</a></li>
+            </ul>
+
+
+
+        </div>
+    </div>
+
+
+
+    <h2> this is ex</h2>
+    <h3> small img start with th | big img start with big</h3>
+    <div imgflip="">
+        <div imglist>
+
+            <a href="#p1"><img src="th1.jpg" alt="image"></a>
+            <a href="#p2"><img src="th2.jpg" alt="image"></a>
+            <a href="#p3"><img src="th3.jpg" alt="image"></a>
+        </div>
+        <div bigimg>
+            <a id="p1"><img src="th1.jpg" alt="image"></a>
+            <a id="p2"><img src="th2.jpg" alt="image"></a>
+            <a id="p3"><img src="th3.jpg" alt="image"></a>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
