@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        section {
+            width: 100%;
+            height: 500px;
+            background-color: #ccc;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .item {
+            background-color: teal;
+            flex-basis: 400px;
+        }
+
+        .big {
+            background-color: orange;
+            flex-grow: 1;
+        }
+
+        @media (max-width: 550px) {
+            section {
+                flex-direction: column;
+            }
+
+            .item {
+                order: 2;
+            }
+
+            .big {
+                order: 1;
+                height: 50vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div class="item">item</div>
+        <div class="big">big</div>
+    </section>
+
+
+</body>
+
+</html>

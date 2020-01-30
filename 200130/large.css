@@ -1,0 +1,53 @@
+:root {
+    --headerWidth: 1100px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: var(--headerWidth);
+    margin: 0 auto;
+    /* ********* */
+    /**  0 _ 0  **/
+    /* *  ___  * */
+    /*  *******  */
+    position: relative;
+}
+
+header {
+    width: inherit;
+    height: 70px;
+    background-color: #660000;
+    color: black;
+
+}
+
+h1 {
+    font-family: tehoma;
+    line-height: 1.5;
+    color: wheat;
+}
+
+section {
+    width: inherit;
+    background-color: lightblue;
+    padding: 15px;
+    /* box-sizing: border-box;*/
+}
+
+p {
+    font-size: 12pt;
+    text-align: justify;
+    font-family: ariel;
+    color: black;
+    column-count: 3;
+    column-gap: 15px;
+    column-rule: 1px black dashed;
+    padding-top: 20px;
+}
